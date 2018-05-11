@@ -1,5 +1,5 @@
-# Guessing Game Bash Script for Unix Workbench
+The guessing game project
+=========================
+* Last run:  Fri May 11 20:35:19 +04 2018
+* Lines of code in 'guessinggame.sh':  31
 
-* This Make file was ran at: 201-05-08:22:02:31
-
-* There were 30 lines in guessinggame.sh
