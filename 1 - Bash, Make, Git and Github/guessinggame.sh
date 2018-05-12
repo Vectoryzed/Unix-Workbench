@@ -16,7 +16,7 @@ echo "Guessing game:"
 echo "-------- -----"
 echo "Can you guess the number of files in this directory? Try, and just remember to include hidden ones!"
 
-echo -n "Your guess is: > "
+echo -n "Your guess: > "
 read GUESS
 
 while [[ $GUESS -ne $NUM_FILES ]]
