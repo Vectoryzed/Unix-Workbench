@@ -1,31 +1,31 @@
 #!/usr/bin/bash
 
-function eval_resp {
+function response_eval {
         if [[ $1 -gt $2 ]]
         then
-                echo "your guess is too high"
+                echo "Your guess is too high"
         else
-                echo "your guess is too low"
+                echo "Your guess is too low"
         fi
 }
 
-NUMFILES=$(ls -pa | grep -v / | wc -l | egrep -o "[0-9]+")
+NUM_FILES=$(ls -pa | grep -v / | wc -l | egrep -o "[0-9]+")
 
 echo " "
 echo "Guessing game:"
 echo "-------- -----"
-echo "guess the number of files in this directory (including hidden ones!)"
+echo "Can you guess the number of files in this directory? Try, and just remember to include hidden ones!"
 
-echo -n "your guess: > "
+echo -n "Your guess is: > "
 read GUESS
 
-while [[ $GUESS -ne $NUMFILES ]]
+while [[ $GUESS -ne $NUM_FILES ]]
 do
-	eval_resp $GUESS $NUMFILES
-	echo -n "try again: > "
+	response_eval $GUESS $NUM_FILES
+	echo -n "Wrong guess! Try again: > "
 	read GUESS
 done
 
-echo "hey! you guessed right!"
+echo "Congratulation! Your guess is right"
 
 exit 0
